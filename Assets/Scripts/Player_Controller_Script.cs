@@ -17,7 +17,6 @@ public class Player_Controller_Script : MonoBehaviour
     public float air_multiplier;
     public float gravityScale;
 
-    static public bool allow_controls;
     float current_speed;
     bool ready_to_jump;
     float start_jump;
@@ -54,7 +53,6 @@ public class Player_Controller_Script : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         ready_to_jump = true;
         start_jump = 0;
-        allow_controls = true;
     }
 
     private void Update()
@@ -92,9 +90,6 @@ public class Player_Controller_Script : MonoBehaviour
 
     private void Inputs()
     {
-        // check if controls is allowed
-        if(!allow_controls) return;
-
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
