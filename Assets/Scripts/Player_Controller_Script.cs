@@ -40,7 +40,6 @@ public class Player_Controller_Script : MonoBehaviour
     [Header("Configs")]
     public Transform spawn_point;
 
-    // public Transform orientation;
     float horizontalInput;
     float verticalInput;
 
@@ -61,7 +60,6 @@ public class Player_Controller_Script : MonoBehaviour
         SpeedControl();
 
         current_velocity = rb.velocity.magnitude;
-        // Debug.Log(current_velocity);
 
         if (Input.GetKey(KeyCode.W))
             start_jump += 1f * Time.deltaTime;
