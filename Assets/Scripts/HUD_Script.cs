@@ -57,7 +57,6 @@ public class HUD_Script : MonoBehaviour
         Time.timeScale = time_scale;
         background_image.SetActive(set_active);
         game_overlay.SetActive(!set_active);
-        Player_Controller_Script.allow_controls = !set_active;
     }
 
     public void PauseButton(bool toggle)
